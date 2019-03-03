@@ -1,0 +1,522 @@
+/* for rtl purpose */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma';  
+    direction:rtl;
+    
+}
+@font-face{
+    src: url("Adobe.Arabic-Regular.otf");
+    font-family: myFont;
+}
+
+
+/* for right to left */
+.row > div{
+    float: right;
+}
+.row h1, h2, h3,h4{
+    font-family: myFont;
+}
+
+#navbar_ID {
+    position: fixed; /* Make it stick/fixed */
+    top: 0; /* Stay on top */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner_header{
+    /* Set a specific height */
+    min-height: 500px; 
+    background-image: url("img1.jpg");
+}
+#banner_middle{
+    min-height: 300px; 
+    background-image: url("img2.jpg");
+}
+#banner_middle2{
+    min-height: 300px; 
+    background-image: url("img3.jpg");
+}
+#main_items{
+    margin-top:10px;
+    padding-top:10px;
+}
+#main_items i{
+    padding-right: 30%;
+    text-align:center;
+}
+
+#video_div{
+    max-width: 100%;
+    height: auto;
+}
+#video{
+    margin-bottom: 50px;
+}
+
+#calculator_datepicker{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* height: 500px; */
+}
+
+/*
+***********************************************
+calcultor
+***********************************************
+*/
+.calculator {
+    width: 350px;
+    height: 320px;
+    background-color: #c0c0c0;
+    box-shadow: 0px 0px 0px 10px #666;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+#display {
+    width: 320px;
+    height: 40px;
+    text-align: right;
+    background-color: black;
+    border: 3px solid white;
+    font-size: 18px;
+    left: 2px;
+    top: 2px;
+    color: #7fff00;
+}
+.btnTop{
+    color: white;
+    background-color: #6f6f6f;
+    font-size: 14px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+.btnNum {
+    color: white;
+    background-color: black;
+    font-size: 14px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+.btnMath {
+    color: white;
+    background-color: #ff4561;
+    font-size: 14px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+.btnOpps {
+    color: white;
+    background-color: #ff9933;
+    font-size: 14px;
+    margin: auto;
+    width: 50px;
+    height: 25px;
+}
+
+/* 
+**********************************************
+gallery image modal 
+**********************************************
+*/
+
+.gallery_img_class {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery_img_class:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*
+end modal image
+*/
+
+
+#services {
+    background-color: rgba(237, 237, 237, 1);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding:10px;
+    
+}
+
+#services h4 {
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+#gallery{
+    background-color: rgba(237, 237, 237, 1);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding:10px;
+}
+
+.table th{
+    text-align:center;
+}
+
+section{
+    background-color: rgba(237, 237, 237, 1)
+}
+
+#contact_about_us{
+    margin-top:2%;
+}
+
+#about_us_header{
+    font-weight: bold;
+}
+
+#about_us ,#contact_us{
+    padding: 5%;
+    padding-top: 0%;
+}
+
+.control-label , .about_us_component {
+    float: right;
+}
+
+#contact_us{
+    margin-top:20px;
+}
+
+
+/* when rtl the direction , the space on the right shows up , this block correct that*/
+.nav.navbar-nav {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.nav.navbar-nav > li {
+    float: right;
+    margin-right: 10px;
+}
+
+.dropdown-menu>li>a{
+    float:right;
+    margin-right: 10px;
+}
+
+/****************************************************************************************/
+/*
+slider
+*/
+#old_works{
+    margin-bottom: 5%;
+}
+#myCarousel{
+    width: 100%;
+}
+.carousel-indicators{
+    direction:ltr;
+}
+/****************************************************************************************/
+#footer {
+    position: relative;
+    height: 55px;
+    bottom: 0;
+    color:#fff;
+    padding-top:20px;
+    width: 100%;
+    background: #00003E; 
+    background: -webkit-linear-gradient(to right, #31BDE6, #00003E);  
+    background: linear-gradient(to right, #31BDE6, #00003E); 
+    text-align:center;
+    direction:ltr;
+}
+
+#jump_top{
+    background-color:#31BDE6;
+    text-align:center;
+    color:black;
+    display: inline-block;
+    width: 4%;
+    height: 90%;
+    border-radius: 50%;
+    opacity: 1;
+    z-index: 1000;
+    position: absolute;
+    bottom:5%;
+    right:5%;
+    transition:all 1s;
+    
+}
+#jump_top span{
+    font-weight: bold;
+    position:absolute;
+    top:32%;
+    left:40%;
+}
+#jump_top:hover{
+    transform: scale(1.2);
+}
+
+#calculator_datepicker,#services {
+    opacity: 0;
+}
+#break_line{
+    height: 0;
+    width:0;
+}
+
+.map-container-2{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    }
+    .map-container-2 iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+
+
+
+    /* for login modal */
+#id01,#modal_register{
+    padding:10px;
+}
+    /* Full-width input fields */
+#username_id, #password_id,#email_id {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  #enter_id {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #enter_id:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    float: left;
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* Modal Content/Box */
+  .modal_content_login {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+#navbar_left_id{
+    margin-top:5px;
+}
+
+nav{
+    z-index: 9999;
+}
+
+@media only screen and (max-width:768px){
+    
+    /* for rtl the li */
+    .nav.navbar-nav  li {
+        float:none;
+    }
+    /* the form must be on the right when navbar is collapsed */
+    form.navbar-form.pull-left{
+        float:right;
+    }
+    /* because the other li of ul after dropdown-menu were added in the dropdown-menu item's lines  */
+    .dropdown-menu>li::after{
+        content:"";
+        clear:both;
+        display:table;
+    }
+    /* for right to left */
+    .row > div{
+        float: none;
+    }
+    
+    #jump_top{
+        width: 10%;
+        height: 90%;
+        bottom:5%;
+        right:5%;
+    }
+    #jump_top span{
+        top:32%;
+        left:40%;
+    }
+    #jump_top:hover{
+        transform: scale(1.2);
+    }
+    
+    .parallax {
+        background-attachment: scroll;
+    }
+    
+    #main_items i{
+        padding-right: 40%;
+        text-align:center;
+    }
+    
+    .modal-content {
+        width: 100%;
+    }
+    #break_line{
+        height: 50px;
+        
+    }
+    #calc{
+        margin-right: 10px;
+    }
+}

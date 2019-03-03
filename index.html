@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="myprj_css.css" type="text/css">
+    <link type="text/css" href="./css/persian-datepicker.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse" id="navbar_ID">
+        <div class="container " >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="nav_home" class="active"><a href="#page_top">خانه <span class="sr-only">(current)</span></a></li>
+                    <li id="nav_services" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">سرویس ها <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#services">سرویس ۱</a></li>
+                            <li><a href="#services">سرویس ۲</a></li>
+                            <li><a href="#services">سرویس ۳</a></li>
+                        </ul>
+                    </li>
+                    <li id="nav_gallery"><a href="#gallery">آشنایی با ما </a></li>
+                    <li id="nav_old_works"><a href="#old_works">محصولات</a></li>
+                    <li id="nav_about_us"><a href="#contact_about_us">درباره ما</a></li>
+                    <li id="nav_contact_us"><a href="#contact_about_us">تماس با ما </a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left" id="navbar_left_id" >
+                    <li><button id="register_btn" type="submit" class="btn btn-info">ثبت نام</button></li>
+                    <li><button id="login_btn" type="submit" class="btn btn-info">ورود</button></li> 
+                </ul>
+            </div><!-- /.navbar-collapse -->
+            
+        </div><!-- /.container-fluid -->
+        
+    </nav>
+    <!-- modal for login  -->
+    <div id="id01" class="modal">
+        <form class="modal_content_login animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img1.jpg" alt="Avatar" class="avatar">
+            </div>
+            
+            <div class="container-fluid">
+                <label for="uname"><b>نام کاربری</b></label>
+                <input id="username_id" type="text" placeholder="نام کاربری" name="uname" required>
+                
+                <label for="psw"><b>رمزعبور</b></label>
+                <input id="password_id" type="password" placeholder="رمزعبور" name="psw" required>
+                
+                <button id="enter_id" type="submit">ورود</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> مرابه خاطربسپار
+                </label>
+            </div>
+            
+            <div class="container-fluid" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">انصراف</button>
+                <span class="psw">فراموش کردی <a href="#">پسورد را؟</a></span>
+            </div>
+        </form>
+    </div>
+    
+    
+    <div id="modal_register" class="modal">
+        <form class="modal_content_login animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('modal_register').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img1.jpg" alt="Avatar" class="avatar">
+            </div>
+            
+            <div class="container-fluid">
+                <label for="uname"><b>نام کاربری</b></label>
+                <input id="username_id" type="text" placeholder="نام کاربری" name="uname" required>
+                
+                <label for="psw"><b>رمزعبور</b></label>
+                <input id="password_id" type="password" placeholder="رمزعبور" name="psw" required>
+
+                <label for="email"><b>ایمیل</b></label>
+                <input id="email_id" type="email" placeholder="ایمیل" name="email" required>
+                
+                <button id="enter_id" type="submit">ثبت نام</button>
+            </div>
+            
+            <div class="container-fluid" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">انصراف</button>
+                <span class="psw">قبلا <a href="#">ثبت نام کرده ای؟</a></span>
+            </div>
+        </form>
+    </div>
+    
+    <div id="page_top"></div>    
+    <div class="parallax" id="banner_header">
+        
+    </div>
+    <div class="container" id="main_container">
+        <section id="main_items">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <i class="fa fa-cloud fa-4x"> </i>
+                    <p>
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <i class="fa fa-heart fa-4x"> </i>
+                    <p>
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <i class="fa fa-car fa-4x"> </i>
+                    <p>
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                    </p>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <i class="fa fa-file fa-4x"> </i>
+                    <p>
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                        این یک متن است که به زبان سلیس فارسی نوشته شده است. لطفا جهت مراجعه با ما تماس بگیرید
+                    </p>
+                </div>
+            </div>   
+        </section>
+        
+        <div class="parallax" id="banner_middle">
+            
+        </div>
+        
+        <section id="gallery">
+            <h2>آشنایی با ما</h2>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="img1.jpg" class="gallery_img_class" alt="این کار در سال ۱۳۹۹ به دست متخصصین ایرانی انجام نشده است!" width="100%" height="auto">
+                    با ما تماس بگیرید
+                </div>
+                <div class="col-sm-4">
+                    <img src="img2.jpg" class="gallery_img_class" alt="این کار در سال ۱۳۹۹ به دست متخصصین ایرانی انجام نشده است!" width="100%" height="auto">
+                    با ما تماس بگیرید
+                </div>
+                <div class="col-sm-4">
+                    <img src="img3.jpg" class="gallery_img_class" alt="این کار در سال ۱۳۹۹ به دست متخصصین ایرانی انجام نشده است!" width="100%" height="auto">
+                    با ما تماس بگیرید
+                </div>
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="services">
+            <div id="services_title" class="row text-center">
+                <div class="col-md-12 pad-bottom" data-scroll-reveal="enter from the bottom after 0.2s">
+                    <h2><strong>خدمات ما</strong></h2>
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                </div>
+            </div>
+            <div id="services_items" class="row text-center pad-bottom" data-scroll-reveal="enter from the bottom after 0.4s">
+                <div id="comment_service" class="col-sm-6 col-md-3">
+                    <h4><span class="glyphicon glyphicon-envelope"></span><strong>نظرات و انتقادات  </strong></h4>
+                    <div class="form-group">
+                        <label for="comment"> نظر بده عمو جان:</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <button type="button" class="btn btn-success">ارسال</button>
+                    </div>
+                </div>
+                <div  class="col-sm-6 col-md-3 tabel_div">
+                    <h4><span class="glyphicon glyphicon-plane"></span><strong>برنامه پروازها </strong></h4>
+                    <div  class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>شماره پرواز</th>
+                                    <th>ساعت پرواز</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1010</td>
+                                    <td>2.45am</td>
+                                </tr>
+                                <tr>
+                                    <td>8787</td>
+                                    <td>5.25pm</td>
+                                </tr>
+                                <tr>
+                                    <td>9999</td>
+                                    <td>6.20pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <h4><span class="glyphicon glyphicon-signal"></span><strong>نمودار آمار سایت </strong></h4>
+                    هم اکنون نموداری در دست نیست لطفا بعدا تلاش نمایید
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <h4><span class="glyphicon glyphicon-user"></span><strong>خدمات شماره ۴ </strong></h4>
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                    خدمات ما خدمات خوبی است. جهت اطلاعات بیشتر تماس بگیرید.
+                </div>
+            </div>
+        </section>
+        
+        <section id="old_works">
+            <div class='row'>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="img1.jpg" alt="Los Angeles" style="width:100%;">
+                        </div>
+                        
+                        <div class="item">
+                            <img src="img2.jpg" alt="Chicago" style="width:100%;">
+                        </div>
+                        
+                        <div class="item">
+                            <img src="img3.jpg" alt="New york" style="width:100%;">
+                        </div>
+                    </div>
+                    
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="video">
+            <div class="row">
+                <div class="col-sm-12 col-md-10 col-md-pull-1" id="video_div">
+                    <div id="15455799758428460">
+                        <script type="text/JavaScript" src="https://www.aparat.com/embed/hZ0vp?data[rnddiv]=15455799758428460&data[responsive]=yes"></script>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        
+        <section id="calculator_datepicker">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <strong class='ui-state-error'>لطفا تاریخ ابتدا و انتها را مشخص نمایید:</strong>
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            تاریخ ابتدا:
+                            <input type="text" id="datepicker0" />
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            تاریخ انتها:
+                            <input type="text" id="datepicker1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-0" id="break_line">
+                    
+                </div>
+                <div class="col-sm-12 col-md-6" id="calc">
+                    <form name="sci-calc">
+                        <div class="form-group">
+                            
+                            <table class="calculator" cellspacing="0" cellpadding="1">
+                                <tr>
+                                    <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)"></td>
+                                    <td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')"></td>
+                                    <td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')"></td>
+                                    <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
+                                    <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
+                                    <tr>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')"></td>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')"></td>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.display, '6')"></td>
+                                        <td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')"></td>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')"></td>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.display, '3')"></td>
+                                        <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)"></td>
+                                        <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+                                        <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+                                        <td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+                                    </tr>
+                                </tr>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <div class="parallax" id="banner_middle2">
+            
+            </div>
+
+        <section id="contact_about_us">
+            <div class="row">
+                <div id="about_us" class="col-md-6 ">
+                    <h1 id="about_us_header">تماس با ما</h1>
+                    <div class="span4">
+                        <h2>ازطریق فرم زیر با ما در  تماس باشید.</h2>
+                        <address>
+                            <p><span class="glyphicon glyphicon-map-marker"></span> ایران-تهران</p>    
+                            
+                            <p><span class="glyphicon glyphicon-phone"></span> 01234567</p>    
+                            <p><span class="glyphicon glyphicon-envelope"></span> example@gmail.com</p>    
+                        </address>
+                    </div>
+                </div>
+                <div id="contact_us" class="col-md-6 ">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" action="" method="post">
+                            <fieldset>
+                                <legend class="text-center">ارتباط با ما</legend>
+                                
+                                <!-- Name input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="name">نام</label>
+                                    <div class="col-md-9 about_us_component">
+                                        <input id="name" name="name" type="text" placeholder="نام شما" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <!-- Email input-->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="email">ایمیل</label>
+                                    <div class="col-md-9 about_us_component">
+                                        <input id="email" name="email" type="text" placeholder="ایمیل شما" class="form-control">
+                                    </div> 
+                                </div>
+                                
+                                <!-- Message body -->
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="message">پیغام شما</label>
+                                    <div class="col-md-9 about_us_component">
+                                        <textarea class="form-control" id="message" name="message" placeholder="لطفا پیغام خودرا وارد نمایید ..." rows="5"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12 text-left about_us_component">
+                                        <button type="submit" class="btn btn-primary btn-lg">ثبت پیام</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="span8">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18330.391034532073!2d51.37300210702998!3d35.692118944382685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e00fab14e8785%3A0x8d08a2f1a8a81ee0!2sShahid+Navvab-e+Safavi!5e0!3m2!1sen!2s!4v1545666492949" width=100% height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <section id="footer">
+            <footer class=" footer">
+                <div class="footer-copyright text-center py-3 " style="direction:ltr">© 2018 Copyright:
+                    <a href="http://www.maktabkhooneh.org"> maktabkhoone.org</a>
+                    <a id="jump_top" href="#page_top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                    
+                </div>
+                
+            </footer>
+            
+        </section>
+        
+    </body>
+    <script type="text/javascript" src="myprj_js.js"></script>
+    <script type="text/javascript" src="./js/persian-datepicker.js"></script>
+    
+    </html>
